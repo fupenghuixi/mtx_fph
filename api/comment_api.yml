@@ -1,0 +1,22 @@
+
+name: 评论接口
+#variables:
+#    var1: value1
+#    var2: value2
+base_url: ${ENV(BASE_URL)}
+
+request:
+    url: /mtx/index.php?s=/index/order/commentssave.html
+    method: POST
+    data:
+        rating[]: '5'
+        content[]: '非常好物美价廉非常好用~(｡≧3≦)ﾉ⌒☆'
+        goods_id[]: '1'
+        id: $id
+    headers:
+        X-Requested-With: 'XMLHttpRequest'
+
+validate:
+    - eq: ["status_code", 200]
+
+

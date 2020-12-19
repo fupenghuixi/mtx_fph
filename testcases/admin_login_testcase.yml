@@ -1,0 +1,10 @@
+
+config:
+    name: 管理员登录用例
+
+teststeps:
+-
+    name: 对管理员登录发起请求
+    api: api/login_admin_api.yml
+
+

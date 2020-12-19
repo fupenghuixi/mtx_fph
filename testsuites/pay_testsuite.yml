@@ -1,0 +1,9 @@
+
+config:
+    name: pay testsuite
+
+testcases:
+-
+    name: 支付用例套件
+    testcase: testcases/pay_testcase.yml
+

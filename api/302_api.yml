@@ -1,0 +1,17 @@
+
+name: 302接口
+
+base_url: ${ENV(BASE_URL)}
+request:
+#url是下订单接口返回值jump_url的数据
+    url: $jump_url
+    method: GET
+#字段设置302不进行重定向
+    allow_redirects: False
+
+
+
+validate:
+    - eq: ["status_code", 302]
+
+

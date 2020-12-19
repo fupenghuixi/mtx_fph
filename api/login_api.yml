@@ -1,0 +1,20 @@
+
+name: 登录接口
+variables:
+#给登录接口赋值默认值（正确入参），方便其它接口调用登录接口
+    name: fupenghui
+    pwd: 123456
+base_url: ${ENV(BASE_URL)}
+request:
+    url: /mtx/index.php?s=/index/user/login.html
+    method: POST
+    data:
+        accounts: $name
+        pwd: $pwd
+    headers:
+        X-Requested-With: 'XMLHttpRequest'
+
+validate:
+    - eq: ["status_code", 200]
+    - eq: [content.msg, success]
+

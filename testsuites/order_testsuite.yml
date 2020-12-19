@@ -1,0 +1,9 @@
+
+config:
+    name: order testsuite
+
+testcases:
+-
+    name: 下订单用例套件
+    testcase: testcases/order_testcase.yml
+

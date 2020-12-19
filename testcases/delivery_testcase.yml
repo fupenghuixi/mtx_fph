@@ -1,0 +1,35 @@
+
+config:
+    name: 发货用例
+
+teststeps:
+-
+    name: 对登录发起请求
+    api: api/login_api.yml
+    validate:
+        - eq: [content.msg, 登录成功]
+
+
+-
+    name: 对下订单发起请求
+    api: api/order_api.yml
+    extract:
+        - jump_url: content.data.jump_url
+        - id: content.data.order.id
+        - user_id: content.data.order.user_id
+
+-
+    name: 对302接口发起请求
+    api: api/302_api.yml
+    extract:
+        - location: headers.Location
+
+-
+    name: 对管理员登录接口发起请求
+    api: api/login_admin_api.yml
+
+-
+    name: 对发货接口发起请求
+    api: api/dilivery_api.yml
+
+

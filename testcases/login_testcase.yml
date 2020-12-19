@@ -1,0 +1,15 @@
+
+config:
+    name: 登录用例
+    variables:
+        title: 正常登录
+        expect_value: 登录成功
+
+
+teststeps:
+-
+    name: $title
+    api: api/login_api.yml
+    validate:
+        - eq: ["status_code", 200]
+        - eq: [content.msg, $expect_value]

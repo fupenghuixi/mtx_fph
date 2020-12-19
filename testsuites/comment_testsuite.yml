@@ -1,0 +1,9 @@
+
+config:
+    name: comm testsuite
+
+testcases:
+-
+    name: 评论用例套件
+    testcase: testcases/comment_testcase.yml
+

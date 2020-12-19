@@ -1,0 +1,20 @@
+
+name: 收货接口
+#variables:
+#    var1: value1
+#    var2: value2
+base_url: ${ENV(BASE_URL)}
+
+request:
+    url: /mtx/admin.php?s=/order/collect.html
+    method: POST
+    data:
+      id: $id
+      value: $user_id
+    headers:
+        X-Requested-With: 'XMLHttpRequest'
+
+validate:
+    - eq: ["status_code", 200]
+
+

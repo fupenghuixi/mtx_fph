@@ -1,0 +1,19 @@
+
+name: 支付接口
+
+base_url: ${ENV(BASE_URL)}
+request:
+#url是302接口返回值（响应头）里location的数据
+    url: $location
+    method: GET
+
+
+
+
+validate:
+    - eq: ["status_code", 200]
+    - contains: [content, 支付成功]
+
+
+
+

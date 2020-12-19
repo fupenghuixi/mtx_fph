@@ -1,0 +1,11 @@
+
+config:
+    name: login testsuite
+
+testcases:
+-
+    name: 登录用例套件
+    testcase: testcases/login_testcase.yml
+    #参数化关键字
+    parameters:
+        name-pwd-title-expect_value: ${P(data/data.csv)}

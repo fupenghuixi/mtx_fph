@@ -1,0 +1,5 @@
+name,pwd,title,expect_value
+fupenghui,123456,正常登录,登录成功
+,yaoyao,账号为空,登录账号有误
+yaoyao,,密码为空,密码格式 6~18 个字符之间
+kdj,0000,账号不存在,密码格式 6~18 个字符之间

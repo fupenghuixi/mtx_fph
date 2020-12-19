@@ -1,0 +1,16 @@
+
+config:
+    name: 提交订单用例
+
+teststeps:
+-
+    name: 对登录发起请求
+    api: api/login_api.yml
+    validate:
+        - eq: [content.msg, 登录成功]
+
+
+-
+    name: 对下订单发起请求
+    api: api/order_api.yml
+

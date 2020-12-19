@@ -1,0 +1,22 @@
+
+name: 发货接口
+#variables:
+#    var1: value1
+#    var2: value2
+base_url: ${ENV(BASE_URL)}
+
+request:
+    url: /mtx/admin.php?s=/order/delivery.html
+    method: POST
+    data:
+      express_number: K73487736
+      id: $id
+      express_id: 1
+      user_id: $user_id
+    headers:
+        X-Requested-With: 'XMLHttpRequest'
+
+validate:
+    - eq: ["status_code", 200]
+
+

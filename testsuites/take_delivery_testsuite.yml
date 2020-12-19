@@ -1,0 +1,9 @@
+
+config:
+    name: dilivery testsuite
+
+testcases:
+-
+    name: 收货用例套件
+    testcase: testcases/take_delivery_testcase.yml
+
